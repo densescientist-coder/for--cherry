@@ -30,9 +30,10 @@ body {
     z-index: 10;
     text-align: center;
     background: rgba(0, 0, 0, 0.85);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 8px;
     border: 1px solid #333;
+    /* This makes the glass effect */
     backdrop-filter: blur(10px);
     transition: opacity 0.8s ease;
     width: 85%;
@@ -43,11 +44,13 @@ body {
     color: #666;
     font-size: 0.75rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .status-msg {
     margin-bottom: 2rem;
     font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 button {
@@ -67,7 +70,7 @@ button {
 button:active, button:hover {
     background: var(--primary-red);
     color: white;
-    box-shadow: 0 0 20px var(--primary-red);
+    box-shadow: 0 0 25px var(--primary-red);
 }
 
 .hidden {
@@ -75,7 +78,11 @@ button:active, button:hover {
     pointer-events: none;
 }
 
+/* Fixes for mobile devices */
 @media (max-width: 600px) {
+    .ui-layer {
+        padding: 1.5rem;
+    }
     button {
         width: 100%;
         font-size: 1rem;
